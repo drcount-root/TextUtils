@@ -8,10 +8,19 @@ export default function TextForm(props) {
   };
 
   const handleDownClick = () => {
-    // console.log("Upper Click was clicked : " + text);
     let newText = text.toLowerCase();
     setText(newText);
   };
+
+  const handleClear = () => {
+    let newText = "";
+    setText(newText);
+  };
+
+  // const handleNumRemover = () => {
+  //   let newText = text.replace(/[0-9]/g, "");
+  //   setText(newText);
+  // };
 
   const handleOnChange = (event) => {
     // console.log("OnChange");
@@ -34,12 +43,18 @@ export default function TextForm(props) {
             rows="8"
           ></textarea>
         </div>
-        <button className="btn btn-primary" onClick={handleUpClick}>
+        <button className="btn btn-success" onClick={handleUpClick}>
           Convert to Uppercase
         </button>
-        <button className="btn btn-success mx-2" onClick={handleDownClick}>
+        <button className="btn btn-primary mx-2" onClick={handleDownClick}>
           Convert to Lowercase
         </button>
+        <button className="btn btn-danger" onClick={handleClear}>
+          Clear
+        </button>
+        {/* <button className="btn btn-secondary mx-2" onClick={handleNumRemover}>
+          Remove Numbers
+        </button> */}
       </div>
       <div className="container my-3">
         <h2>Your text summery</h2>

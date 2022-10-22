@@ -39,7 +39,7 @@ export default function Navbar(props) {
               placeholder="Search"
               aria-label="Search"
             />
-            <button className="btn btn-primary" type="submit">
+            <button className="btn btn-warning" type="submit">
               Search
             </button>
           </form>
