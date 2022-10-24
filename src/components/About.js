@@ -4,6 +4,7 @@ export default function About() {
   const [myStyle, setMyStyle] = useState({
     color: "black",
     backgroundColor: "white",
+    borderRadius: "10px",
   });
 
   const [btnText, setBtnText] = useState("Enable Dark Mode");
@@ -12,7 +13,7 @@ export default function About() {
     if (myStyle.color === "black") {
       setMyStyle({
         color: "white",
-        backgroundColor: "black",
+        backgroundColor: "#09213d",
         border: "1px solid white",
         borderRadius: "10px",
       });
@@ -21,6 +22,8 @@ export default function About() {
       setMyStyle({
         color: "black",
         backgroundColor: "white",
+        borderRadius: "10px",
+        paddingTop: "5px",
       });
       setBtnText("Enable Dark Mode");
     }
@@ -129,9 +132,9 @@ export default function About() {
       </div>
 
       {/* <div className="container my-3"> */}
-        <button type="button" className="btn btn-info my-3" onClick={toggleStyle}>
-          {btnText}
-        </button>
+      <button type="button" className="btn btn-info my-3" onClick={toggleStyle}>
+        {btnText}
+      </button>
       {/* </div> */}
     </div>
   );

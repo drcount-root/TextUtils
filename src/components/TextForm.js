@@ -61,7 +61,7 @@ export default function TextForm(props) {
             value={text}
             onChange={handleOnChange}
             style={{
-              backgroundColor: props.mode === "dark" ? "#212529" : "white",
+              backgroundColor: props.mode === "dark" ? "rgb(20, 20, 20)" : "white",
               color: props.mode === "dark" ? "white" : "black",
             }}
             id="myBox"

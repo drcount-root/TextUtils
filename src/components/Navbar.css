@@ -1,3 +1,13 @@
 .navbar-dark {
   background-color: rgb(20, 20, 20) !important;
 }
+
+.btn-olive-dark {
+  background-color: #485b03 !important;
+  /* #1a2101 */
+}
+
+.btn-reddish-dark {
+  background-color: #770730 !important;
+  /* #21010d */
+}
