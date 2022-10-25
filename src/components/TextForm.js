@@ -21,11 +21,11 @@ export default function TextForm(props) {
   };
 
   const handleCopy = () => {
-    let text = document.getElementById("myBox");
-    text.select();
-    navigator.clipboard.writeText(text.value);
-    document.getSelection().removeAllRanges();
-    props.showAlert("Copied", "success");
+    // let text = document.getElementById("myBox");
+    // text.select();
+    navigator.clipboard.writeText(text);
+    // document.getSelection().removeAllRanges();
+    props.showAlert("Copied to clipboard", "success");
   };
 
   const handleExtraSpaces = () => {
@@ -117,7 +117,7 @@ export default function TextForm(props) {
         <h2>Your text summery</h2>
         <p>
           {
-            text.split(" ").filter((elem) => {
+            text.split(/\s+/).filter((elem) => {
               return elem.length !== 0;
             }).length
           }{" "}
